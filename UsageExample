@@ -1,0 +1,13 @@
+1. 图片压缩工具 BitmapProcessor
+
+BitmapProcessor.Builder builder = new BitmapProcessor.Builder();
+            BitmapProcessor processor = builder.withCompress()
+                    .setQuality(60)
+                    .withSampleSize().setSampleSize(4)
+                    .setListener(new BitmapProcessor.ExecutorListener() {
+                        @Override
+                        public void onFinish(Bitmap bitmap) {
+                            deal(type, bitmap);
+                        }
+                    }).build();
+            processor.process(bitmap);
