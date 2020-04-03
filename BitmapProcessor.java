@@ -106,7 +106,7 @@ public class BitmapProcessor {
             if (mBuilder.isScale) {
                 Matrix matrix = new Matrix();
                 matrix.setScale(mBuilder.xScale, mBuilder.yScale);
-                result = Bitmap.createBitmap(result, 0, 0, result.getWidth(), bitmap.getHeight(), matrix, true);
+                result = Bitmap.createBitmap(result, 0, 0, result.getWidth(), result.getHeight(), matrix, true);
             }
         }
         FileUtil.removeFile(cacheFile);
